@@ -1,32 +1,30 @@
 package com.digitalmoneyhouse.user_service.controller;
 
+import com.digitalmoneyhouse.user_service.exception.InvalidTokenException;
 import com.digitalmoneyhouse.user_service.service.AuthService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    @Autowired
-    private AuthService authService;
+    private final AuthService authService;
+
+    public AuthController(AuthService authService) {
+        this.authService = authService;
+    }
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletRequest request) {
-        try {
-            String token = request.getHeader("Authorization");
-            if (token == null || !token.startsWith("Bearer ")) {
-                return ResponseEntity.badRequest().body("Token no proporcionado o formato incorrecto");
-            }
+    public ResponseEntity<?> logout(HttpServletRequest request) {
+        String token = request.getHeader("Authorization");
 
-            token = token.substring(7);
-            authService.logout(token);
-            return ResponseEntity.ok("Logout exitoso. Token invalidado.");
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body("Error interno al cerrar sesión");
+        if (token == null || !token.startsWith("Bearer ")) {
+            throw new InvalidTokenException("Token no proporcionado o formato incorrecto");
         }
+
+        authService.logout(token.substring(7));
+        return ResponseEntity.ok().body("Logout exitoso. Token invalidado.");
     }
 }

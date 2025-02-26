@@ -57,7 +57,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/login", "/api/auth/register").permitAll()  // Permitir login y registro
+                        .requestMatchers("/api/auth/login", "/api/users/register").permitAll()  // Permitir login y registro
                         .anyRequest().authenticated()  // Proteger todo lo demás
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)  // Agregar el filtro JWT

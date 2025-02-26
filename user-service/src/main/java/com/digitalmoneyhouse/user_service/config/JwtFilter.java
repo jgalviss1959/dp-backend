@@ -133,7 +133,7 @@ public class JwtFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         // 🚨 Ignorar validación de token en las rutas públicas 🚨
-        if (request.getRequestURI().equals("/api/auth/login") || request.getRequestURI().equals("/api/auth/register")) {
+        if (request.getRequestURI().equals("/api/auth/login") || request.getRequestURI().equals("/api/users/register")) {
             filterChain.doFilter(request, response);
             return;
         }
