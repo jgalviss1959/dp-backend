@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+//@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -27,4 +28,10 @@ public class AuthController {
         authService.logout(token.substring(7));
         return ResponseEntity.ok().body("Logout exitoso. Token invalidado.");
     }
+
+    @GetMapping("/isRevoked/{token}")
+    public boolean isRevoked(@PathVariable String token) {
+        return authService.isTokenRevoked(token);
+    }
+
 }

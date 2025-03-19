@@ -42,10 +42,10 @@
 		</dependency>
 
 		<!-- SPRING SECURITY & AUTH -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
 		<!-- Proporciona las clases y métodos para manejar JWT -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -148,8 +148,13 @@
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>10.1.36</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>6.2.3</version>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

@@ -32,6 +32,12 @@ public class UserService {
     }
 
     public User registerUser(UserDTO userDTO) {
+        System.out.println(userDTO.getFirstName() + " nombre");
+        System.out.println(userDTO.getLastName() + " apellido");
+        System.out.println(userDTO.getPhone() + " tel");
+        System.out.println(userDTO.getDni()+" dni");
+        System.out.println(userDTO.getEmail()+" mail");
+        System.out.println(userDTO.getPassword()+" pwd");
         validateRequiredFields(userDTO);
 
         // 🔹 Validar si el email ya existe
@@ -40,10 +46,11 @@ public class UserService {
         }
 
         User user = new User();
-        user.setNombreApellido(userDTO.getNombreApellido());
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
         user.setDni(userDTO.getDni());
         user.setEmail(userDTO.getEmail());
-        user.setTelefono(userDTO.getTelefono());
+        user.setPhone(userDTO.getPhone());
         user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         user.setCvu(generateCVU());
         user.setAlias(generateAlias());
@@ -52,17 +59,24 @@ public class UserService {
     }
 
     private void validateRequiredFields(UserDTO userDTO) {
-        if (userDTO.getNombreApellido() == null || userDTO.getNombreApellido().trim().isEmpty() ||
+        if (userDTO.getFirstName() == null || userDTO.getFirstName().trim().isEmpty() ||
+                userDTO.getLastName() == null || userDTO.getLastName().trim().isEmpty() ||
                 userDTO.getDni() == null || userDTO.getDni().trim().isEmpty() ||
                 userDTO.getEmail() == null || userDTO.getEmail().trim().isEmpty() ||
-                userDTO.getTelefono() == null || userDTO.getTelefono().trim().isEmpty() ||
+                userDTO.getPhone() == null || userDTO.getPhone().trim().isEmpty() ||
                 userDTO.getPassword() == null || userDTO.getPassword().trim().isEmpty()) {
+
             throw new MissingRequiredFieldsException("Faltan datos obligatorios. Verifique que todos los campos estén completos.");
         }
     }
 
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("Usuario no encontrado"));
+    }
+
+    public User getUserById(Long id) {
+        return userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("Usuario no encontrado"));
     }
 

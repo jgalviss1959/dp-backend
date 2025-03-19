@@ -14,7 +14,10 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
-    private String nombreApellido;
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
 
     @Column(unique = true, nullable = false)
     private String dni;
@@ -23,7 +26,7 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    private String telefono;
+    private String phone;
 
     @Column(nullable = false)
     private String password;
