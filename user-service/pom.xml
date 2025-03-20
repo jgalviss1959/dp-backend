@@ -153,8 +153,14 @@
             <artifactId>spring-webmvc</artifactId>
             <version>6.2.3</version>
         </dependency>
+		<dependency>
+			<groupId>com.digitalmoneyhouse</groupId>
+			<artifactId>wallet-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>

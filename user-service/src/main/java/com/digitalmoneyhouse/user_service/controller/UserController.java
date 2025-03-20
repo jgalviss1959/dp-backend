@@ -3,6 +3,7 @@ package com.digitalmoneyhouse.user_service.controller;
 import com.digitalmoneyhouse.user_service.dto.UserDTO;
 import com.digitalmoneyhouse.user_service.entity.User;
 import com.digitalmoneyhouse.user_service.service.UserService;
+import com.digitalmoneyhouse.wallet_service.dto.UserAliasDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -38,4 +39,15 @@ public class UserController {
         User user = userService.getUserById(id);
         return ResponseEntity.ok(user);
     }
+
+    @GetMapping("/{id}/alias")
+    public ResponseEntity<UserAliasDTO> getUserAlias(@PathVariable Long id) {
+        User user = userService.getUserById(id);
+        UserAliasDTO userAliasDTO = new UserAliasDTO();
+        userAliasDTO.setId(user.getId());
+        userAliasDTO.setAlias(user.getAlias());
+        userAliasDTO.setCvu(user.getCvu());
+        return ResponseEntity.ok(userAliasDTO);
+    }
+
 }

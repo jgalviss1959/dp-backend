@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "user-service")
 public interface UserClient {
 
-    // Asumimos que en user-service tienes un endpoint GET /users/{id} que devuelve la info de alias y CVU
-    @GetMapping("/users/{id}")
+    @GetMapping("/api/users/{id}/alias")
     UserAliasDTO getUserAliasInfo(@PathVariable("id") Long userId);
 }

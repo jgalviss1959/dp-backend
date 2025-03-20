@@ -16,8 +16,8 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    // GET /transactions/account/{accountId}/last5
-    @GetMapping("/account/{accountId}/last5")
+    // GET /api/transactions/account/{accountId}/last
+    @GetMapping("/account/{accountId}/last")
     public ResponseEntity<List<TransactionDTO>> getLast5Transactions(@PathVariable Long accountId) {
         List<Transaction> transactions = transactionService.getLast5TransactionsByAccountId(accountId);
 
