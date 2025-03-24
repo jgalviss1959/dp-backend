@@ -2,6 +2,7 @@ package com.digitalmoneyhouse.user_service.service;
 
 import com.digitalmoneyhouse.user_service.dto.LoginDTO;
 import com.digitalmoneyhouse.user_service.dto.UserDTO;
+import com.digitalmoneyhouse.user_service.dto.UserUpdateDTO;
 import com.digitalmoneyhouse.user_service.entity.User;
 import com.digitalmoneyhouse.user_service.exception.MissingRequiredFieldsException;
 import com.digitalmoneyhouse.user_service.exception.UserNotFoundException;
@@ -99,4 +100,15 @@ public class UserService {
                 UUID.randomUUID().toString().substring(4, 7) + "." +
                 UUID.randomUUID().toString().substring(8, 11);
     }
+
+    public void updateUser(Long id, UserUpdateDTO dto) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException("Usuario con ID " + id + " no encontrado"));
+
+        if (dto.getEmail() != null) user.setEmail(dto.getEmail());
+        if (dto.getPhone() != null) user.setPhone(dto.getPhone());
+
+        userRepository.save(user);
+    }
+
 }

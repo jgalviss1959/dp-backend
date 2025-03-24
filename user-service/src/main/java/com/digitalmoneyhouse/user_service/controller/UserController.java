@@ -1,6 +1,7 @@
 package com.digitalmoneyhouse.user_service.controller;
 
 import com.digitalmoneyhouse.user_service.dto.UserDTO;
+import com.digitalmoneyhouse.user_service.dto.UserUpdateDTO;
 import com.digitalmoneyhouse.user_service.entity.User;
 import com.digitalmoneyhouse.user_service.service.UserService;
 import com.digitalmoneyhouse.wallet_service.dto.UserAliasDTO;
@@ -48,6 +49,12 @@ public class UserController {
         userAliasDTO.setAlias(user.getAlias());
         userAliasDTO.setCvu(user.getCvu());
         return ResponseEntity.ok(userAliasDTO);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @RequestBody UserUpdateDTO updateDTO) {
+        userService.updateUser(id, updateDTO);
+        return ResponseEntity.ok("Perfil actualizado con éxito");
     }
 
 }

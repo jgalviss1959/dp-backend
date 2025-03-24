@@ -115,4 +115,19 @@ class WalletServiceApplicationTests {
 				.contentType("text/plain")
 				.body(containsString("Tarjeta eliminada correctamente"));
 	}
+
+	@Test
+	public void testGetAccountIncludesAliasAndCvu() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/accounts/dashboard/1")
+				.then()
+				.statusCode(200)
+				.body("id", notNullValue())
+				.body("balance", notNullValue())
+				.body("alias", not(emptyOrNullString()))
+				.body("cvu", allOf(not(emptyOrNullString()), hasLength(22)));
+	}
+
 }

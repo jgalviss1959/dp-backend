@@ -88,4 +88,23 @@ class UserServiceApplicationTests {
                 .body("lastName", notNullValue())
                 .body("email", notNullValue());
     }
+
+    @Test
+    public void testUpdateUserProfile() {
+
+        testLoginValidUser();
+
+        String requestBody = "{\"email\": \"fio@mail.com\", \"phone\": \"099123456\"}";
+
+        given()
+                .header("Authorization", "Bearer " + token)
+                .contentType(ContentType.JSON)
+                .body(requestBody)
+                .when()
+                .patch("/users/1")
+                .then()
+                .statusCode(200)
+                .body(equalTo("Perfil actualizado con éxito"));
+    }
+
 }

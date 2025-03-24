@@ -159,8 +159,14 @@
 			<artifactId>rest-assured</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <dependency>
+            <groupId>com.digitalmoneyhouse</groupId>
+            <artifactId>transaction-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

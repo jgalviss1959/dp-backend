@@ -31,4 +31,9 @@ public class AccountService {
         return account;
     }
 
+    public Double getBalance(Long accountId) {
+        Account account = getAccountById(accountId);
+        return account.getBalance().doubleValue();
+    }
+
 }
