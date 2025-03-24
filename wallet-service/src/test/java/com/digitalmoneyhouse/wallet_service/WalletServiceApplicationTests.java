@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.*;
 
 @SpringBootTest
 class WalletServiceApplicationTests {
@@ -75,4 +75,44 @@ class WalletServiceApplicationTests {
 				.body("balance", notNullValue());
 	}
 
+	@Test
+	public void testGetUserCards() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/accounts/1/cards")
+				.then()
+				.statusCode(200)
+				.body("size()", greaterThanOrEqualTo(0));
+	}
+
+	@Test
+	public void testAddCardToAccount() {
+		String requestBody = "{" +
+				"\"cardNumber\": \"2534567854624321\", " +
+				"\"cardHolder\": \"Juan Pérez\", " +
+				"\"expirationDate\": \"12/26\", " +
+				"\"cardType\": \"DEBIT\" }";
+
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.contentType(ContentType.JSON)
+				.body(requestBody)
+				.when()
+				.post("/accounts/1/cards")
+				.then()
+				.statusCode(201);
+	}
+
+	@Test
+	public void testDeleteCardFromAccount() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.delete("/accounts/1/cards/10")
+				.then()
+				.statusCode(200)
+				.contentType("text/plain")
+				.body(containsString("Tarjeta eliminada correctamente"));
+	}
 }

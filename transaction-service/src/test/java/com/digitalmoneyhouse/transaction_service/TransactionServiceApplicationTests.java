@@ -32,45 +32,95 @@ class WalletServiceApplicationTests {
 				.path("token"); // Extrae el token de la respuesta
 	}
 
+
 	@Test
-	public void testGetUserCards() {
+	public void testGetActivityWithValidId() {
 		given()
 				.header("Authorization", "Bearer " + validToken)
 				.when()
-				.get("/accounts/1/cards")
+				.get("/transactions/accounts/1/activity")
 				.then()
 				.statusCode(200)
-				.body("size()", greaterThanOrEqualTo(0)); // Valida que haya una lista de tarjetas (puede estar vacía)
+				.body("size()", greaterThanOrEqualTo(0));
 	}
 
 	@Test
-	public void testAddCardToAccount() {
+	public void testGetActivityWithoutToken() {
+		given()
+				.when()
+				.get("/transactions/accounts/1/activity")
+				.then()
+				.statusCode(401);
+	}
+
+	@Test
+	public void testGetActivityWithInvalidId() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/transactions/accounts/9999/activity/1")
+				.then()
+				.statusCode(404);
+	}
+
+	@Test
+	public void testGetActivity() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/transactions/accounts/1/activity/1")
+				.then()
+				.statusCode(200)
+				.body("amount", equalTo(100.50f));
+	}
+
+	@Test
+	public void testGetActivityBadReq() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/transactions/accounts/0/activity/1")
+				.then()
+				.statusCode(400)
+				.body(equalTo("ID inválido"));
+	}
+
+	@Test
+	public void testGetActivityNoToken() {
+		given()
+				.when()
+				.get("/transactions/accounts/1/activity/1")
+				.then()
+				.statusCode(401);
+	}
+
+	@Test
+	public void testGetActivityWithInvalidActivityId() {
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.when()
+				.get("/transactions/accounts/1/activity/9999")
+				.then()
+				.statusCode(404)
+				.body(equalTo("ActivityID inexistente"));
+	}
+
+	@Test
+	public void testDepositToWallet() {
 		String requestBody = "{" +
-				"\"cardNumber\": \"1234567854624321\", " +
-				"\"cardHolder\": \"Juan Pérez\", " +
-				"\"expirationDate\": \"12/26\", " +
-				"\"cardType\": \"DEBIT\" }";
+				"\"accountId\": 1, " +
+				"\"cardNumber\": \"1234567812345678\", " +
+				"\"amount\": 50.00}";
 
 		given()
 				.header("Authorization", "Bearer " + validToken)
 				.contentType(ContentType.JSON)
 				.body(requestBody)
 				.when()
-				.post("/accounts/1/cards")
+				.post("/transactions/accounts/1/transferences")
 				.then()
-				.statusCode(201);
-	}
-
-	@Test
-	public void testDeleteCardFromAccount() {
-		given()
-				.header("Authorization", "Bearer " + validToken)
-				.when()
-				.delete("/accounts/1/cards/7")
-				.then()
-				.statusCode(200)
-				.contentType("text/plain")
-				.body(containsString("Tarjeta eliminada correctamente"));
+				.statusCode(201)
+				.body("amount", equalTo(50.00f));
 	}
 
 }
