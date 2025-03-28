@@ -39,10 +39,13 @@ public class JwtAuthenticationFilter implements GlobalFilter {
         String path = request.getURI().getPath();
         System.out.println(">>> Path is: " + path);
 
-        // Omitir validación en rutas públicas (login, register, logout)
         if (path.startsWith("/api/auth/login") ||
                 path.startsWith("/api/users/register") ||
-                path.startsWith("/api/auth/logout")) {
+                path.startsWith("/api/auth/logout") ||
+                path.startsWith("/v3/api-docs/**") ||
+                path.startsWith("/swagger-ui/**") ||
+                path.startsWith("swagger-ui.html"))
+        {
             return chain.filter(exchange);
         }
 
