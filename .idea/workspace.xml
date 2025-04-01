@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e770e2c5-027d-43ad-b4fe-762a219020dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/config/FeignClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/client/TokenClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/client/TokenClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/FeignClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/FeignClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/CvuAliasGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/CvuAliasGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/digitalmoneyhouse/user_service/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/digitalmoneyhouse/user_service/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/config/FeignClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/config/FeignClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/CardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/CardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/CardService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2v78triStyBxjo3j6zIiOH0ER73" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/OneDrive/Desktop/AYUDA/digital-money-house&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalmoneyhouse.api_gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.eureka_server.EurekaServerApplication" />
+      <module name="eureka-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalmoneyhouse.eureka_server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.user_service.UserServiceApplication" />
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalmoneyhouse.user_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e770e2c5-027d-43ad-b4fe-762a219020dc" name="Changes" comment="" />
+      <created>1743484969630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743484969630</updated>
+    </task>
+    <servers />
+  </component>
+</project>

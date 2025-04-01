@@ -14,29 +14,13 @@
         <module name="wallet-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="payment-service" target="21" />
-      <module name="report-service" target="21" />
-      <module name="user-service (1)" target="21" />
-      <module name="user-service (2)" target="21" />
-      <module name="user-service (3)" target="21" />
-      <module name="user-service (4)" target="21" />
-      <module name="user-service (5)" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
-      <module name="payment-service" options="-parameters" />
-      <module name="report-service" options="-parameters" />
       <module name="transaction-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
-      <module name="user-service (1)" options="-parameters" />
-      <module name="user-service (2)" options="-parameters" />
-      <module name="user-service (3)" options="-parameters" />
-      <module name="user-service (4)" options="-parameters" />
-      <module name="user-service (5)" options="-parameters" />
       <module name="wallet-service" options="-parameters" />
     </option>
   </component>
