@@ -7,6 +7,9 @@ import com.digitalmoneyhouse.wallet_service.repository.AccountRepository;
 import com.digitalmoneyhouse.wallet_service.exception.AccountNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.math.BigDecimal;
 
 @Service
 public class AccountService {
@@ -34,6 +37,23 @@ public class AccountService {
     public Double getBalance(Long accountId) {
         Account account = getAccountById(accountId);
         return account.getBalance().doubleValue();
+    }
+
+    @Transactional
+    public void updateBalance(Long accountId, BigDecimal newBalance) {
+        Account account = accountRepository.findById(accountId)
+                .orElseThrow(() -> new AccountNotFoundException(accountId));
+        account.setBalance(newBalance);
+        accountRepository.save(account);
+    }
+
+    @Transactional
+    public void increaseBalance(Long accountId, BigDecimal amount) {
+        Account account = accountRepository.findById(accountId)
+                .orElseThrow(() -> new AccountNotFoundException(accountId));
+        BigDecimal currentBalance = account.getBalance();
+        account.setBalance(currentBalance.add(amount));
+        accountRepository.save(account);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.digitalmoneyhouse.transaction_service.service;
 
+import com.digitalmoneyhouse.transaction_service.config.WalletClient;
 import com.digitalmoneyhouse.transaction_service.dto.ActivityDTO;
 import com.digitalmoneyhouse.transaction_service.dto.DepositRequestDTO;
 import com.digitalmoneyhouse.transaction_service.entity.Transaction;
@@ -19,6 +20,9 @@ public class TransactionService {
 
     @Autowired
     private TransactionRepository transactionRepository;
+
+    @Autowired
+    private WalletClient walletClient;
 
     public List<Transaction> getLast5TransactionsByAccountId(Long accountId) {
         return transactionRepository.findTop5ByAccountIdOrderByDateDesc(accountId);
@@ -44,15 +48,28 @@ public class TransactionService {
             throw new IllegalArgumentException("El monto debe ser mayor a cero.");
         }
 
+        Long accountId = depositRequest.getAccountId();
+        BigDecimal amount = depositRequest.getAmount();
+
         // Crear nueva transacción de depósito
         Transaction transaction = new Transaction(
-                depositRequest.getAccountId(),
-                depositRequest.getAmount(),
+                accountId,
+                amount,
                 LocalDateTime.now(),
                 "DEPOSIT"
         );
 
-        return transactionRepository.save(transaction);
+        transactionRepository.save(transaction);
+
+        // Llamar al wallet-service para aumentar el saldo de la cuenta
+        try {
+            walletClient.increaseAccountBalance(accountId, amount);
+        } catch (Exception e) {
+            // Loggear el error al intentar actualizar el saldo.
+            System.err.println("Error al actualizar el saldo en wallet-service para la cuenta " + accountId + ": " + e.getMessage());
+        }
+
+        return transaction;
     }
 
     public List<ActivityDTO> getAccountActivity(Long accountId) {

@@ -5,11 +5,14 @@ import com.digitalmoneyhouse.wallet_service.client.TransactionClient;
 import com.digitalmoneyhouse.wallet_service.dto.AccountDTO;
 import com.digitalmoneyhouse.wallet_service.dto.DashboardDTO;
 import com.digitalmoneyhouse.wallet_service.entity.Account;
+import com.digitalmoneyhouse.wallet_service.exception.AccountNotFoundException;
 import com.digitalmoneyhouse.wallet_service.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -19,7 +22,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @Autowired
+    @Autowired(required = false)
     private TransactionClient transactionClient;
 
     @GetMapping("/{id}")
@@ -53,4 +56,15 @@ public class AccountController {
     }
 
 
+    @PutMapping("/{accountId}/deposit")
+    public ResponseEntity<Void> increaseAccountBalance(@PathVariable Long accountId, @RequestBody BigDecimal amount) {
+        try {
+            accountService.increaseBalance(accountId, amount);
+            return ResponseEntity.noContent().build();
+        } catch (com.digitalmoneyhouse.wallet_service.exception.AccountNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
 }
