@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e770e2c5-027d-43ad-b4fe-762a219020dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/AccountDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/TransferRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/WalletClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/WalletClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/exception/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/exception/AccountNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +45,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/OneDrive/Desktop/AYUDA/digital-money-house&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="JUnit.TransactionServiceApplicationTests.testTransferBetweenAccounts">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -67,21 +59,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.eureka_server.EurekaServerApplication" />
-      <module name="eureka-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.digitalmoneyhouse.eureka_server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransactionServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.transaction_service.TransactionServiceApplication" />
+    <configuration name="TransactionServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="transaction-service" />
       <extension name="coverage">
         <pattern>
@@ -89,12 +67,30 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.digitalmoneyhouse.transaction_service" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.transaction_service.TransactionServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.user_service.UserServiceApplication" />
+    <configuration name="TransactionServiceApplicationTests.testTransferBetweenAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="transaction-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalmoneyhouse.transaction_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.digitalmoneyhouse.transaction_service" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.transaction_service.TransactionServiceApplicationTests" />
+      <option name="METHOD_NAME" value="testTransferBetweenAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -102,12 +98,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.digitalmoneyhouse.user_service" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.user_service.UserServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WalletServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.wallet_service.WalletServiceApplication" />
+    <configuration name="WalletServiceApplicationTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wallet-service" />
       <extension name="coverage">
         <pattern>
@@ -115,17 +113,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.digitalmoneyhouse.wallet_service" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.wallet_service.WalletServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WalletServiceApplication" />
-        <item itemvalue="Application.TransactionServiceApplication" />
+        <item itemvalue="JUnit.TransactionServiceApplicationTests.testTransferBetweenAccounts" />
+        <item itemvalue="JUnit.WalletServiceApplicationTests (1)" />
+        <item itemvalue="JUnit.UserServiceApplicationTests" />
+        <item itemvalue="JUnit.TransactionServiceApplicationTests" />
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.UserServiceApplication" />
-        <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>

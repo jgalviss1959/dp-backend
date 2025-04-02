@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 @SpringBootTest
-class WalletServiceApplicationTests {
+class TransactionServiceApplicationTests {
 
 	private static String validToken;
 
@@ -121,6 +121,24 @@ class WalletServiceApplicationTests {
 				.then()
 				.statusCode(201)
 				.body("amount", equalTo(50.00f));
+	}
+
+	@Test
+	public void testTransferBetweenAccounts() {
+		String requestBody = "{" +
+				"\"origin\": \"0d188f5116e44680a4d32d\", " +
+				"\"destination\": \"5c24bd6d418348f9ad722f\", " +
+				"\"amount\": 1}";
+
+		given()
+				.header("Authorization", "Bearer " + validToken)
+				.contentType(ContentType.JSON)
+				.body(requestBody)
+				.when()
+				.post("/transactions/accounts/transfer")
+				.then()
+				.statusCode(200)
+				.body("message", containsString("Transferencia realizada")); // adaptá según tu respuesta real
 	}
 
 }
