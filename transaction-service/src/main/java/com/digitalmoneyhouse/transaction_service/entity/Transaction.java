@@ -20,7 +20,7 @@ public class Transaction {
     private Long accountId;
     private BigDecimal amount;
     private LocalDateTime date;
-    private String type; // "DEBIT" o "CREDIT", por ejemplo
+    private String type; // "DEPOSIT", "CREDIT", "DEBIT", "TRANSFER"
 
     public Transaction() {
     }

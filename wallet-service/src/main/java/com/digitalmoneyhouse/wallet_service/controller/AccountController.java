@@ -67,4 +67,26 @@ public class AccountController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
+
+    @PutMapping("/balance/{accountId}")
+    public ResponseEntity<Void> updateAccountBalance(@PathVariable Long accountId, @RequestBody BigDecimal newBalance) {
+        try {
+            accountService.updateBalance(accountId, newBalance);
+            return ResponseEntity.noContent().build();
+        } catch (AccountNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/cvu/{cvu}")
+    public ResponseEntity<AccountDTO> getAccountByCvu(@PathVariable String cvu) {
+        try {
+            AccountDTO accountDTO = accountService.findByCvu(cvu);
+            return ResponseEntity.ok(accountDTO);
+        } catch (AccountNotFoundException e) {
+            return ResponseEntity.status(404).body(null);
+        }
+    }
 }

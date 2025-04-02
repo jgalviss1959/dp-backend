@@ -1,6 +1,7 @@
 package com.digitalmoneyhouse.wallet_service.service;
 
 import com.digitalmoneyhouse.wallet_service.client.UserClient;
+import com.digitalmoneyhouse.wallet_service.dto.AccountDTO;
 import com.digitalmoneyhouse.wallet_service.dto.UserAliasDTO;
 import com.digitalmoneyhouse.wallet_service.entity.Account;
 import com.digitalmoneyhouse.wallet_service.repository.AccountRepository;
@@ -54,6 +55,12 @@ public class AccountService {
         BigDecimal currentBalance = account.getBalance();
         account.setBalance(currentBalance.add(amount));
         accountRepository.save(account);
+    }
+
+    public AccountDTO findByCvu(String cvu) {
+        return accountRepository.findByCvu(cvu)
+                .map(account -> new AccountDTO(account.getId(), account.getBalance(), account.getAlias(), account.getCvu()))
+                .orElseThrow(() -> new AccountNotFoundException("Cuenta con CVU " + cvu + " no encontrada"));
     }
 
 }

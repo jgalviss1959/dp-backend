@@ -3,6 +3,7 @@ package com.digitalmoneyhouse.transaction_service.controller;
 import com.digitalmoneyhouse.transaction_service.dto.ActivityDTO;
 import com.digitalmoneyhouse.transaction_service.dto.DepositRequestDTO;
 import com.digitalmoneyhouse.transaction_service.dto.TransactionDTO;
+import com.digitalmoneyhouse.transaction_service.dto.TransferRequestDTO;
 import com.digitalmoneyhouse.transaction_service.entity.Transaction;
 import com.digitalmoneyhouse.transaction_service.service.TransactionService;
 import org.slf4j.Logger;
@@ -12,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -110,4 +112,24 @@ public class TransactionController {
         Transaction transaction = transactionService.depositToWallet(depositRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(transaction);
     }
+
+    // Registrar una transferencia entre cuentas
+    @PostMapping("/accounts/transfer")
+    public ResponseEntity<?> transferBetweenAccounts(@RequestBody TransferRequestDTO request,
+                                                     @RequestHeader("Authorization") String token) {
+        if (token == null || token.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Sin permisos");
+        }
+
+        try {
+            Transaction transaction = transactionService.transferBetweenAccounts(request.getOrigin(), request.getDestination(), request.getAmount());
+            return ResponseEntity.status(HttpStatus.CREATED).body(transaction);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error en la transferencia.");
+        }
+    }
+
+
 }
