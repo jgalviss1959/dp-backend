@@ -1,9 +1,8 @@
 package com.digitalmoneyhouse.wallet_service.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Pattern;
-
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,6 +27,9 @@ public class CardDTO {
         @NotBlank(message = "El tipo de tarjeta no puede estar vacío")
         @Pattern(regexp = "DEBIT|CREDIT", message = "El tipo de tarjeta debe ser DEBIT o CREDIT")
         private String cardType;
+
+    public CardDTO() {
+    }
 
     public CardDTO(Long id, String cardNumber, String cardHolder, String expirationDate, String cardType) {
         this.id = id;

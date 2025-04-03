@@ -1,13 +1,21 @@
 package com.digitalmoneyhouse.transaction_service.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 public class ActivityDTO {
     private Long id;
     private String type;
     private BigDecimal amount;
     private LocalDateTime date;
+
+    public ActivityDTO() {
+    }
 
     public ActivityDTO(Long id, String type, BigDecimal amount, LocalDateTime date) {
         this.id = id;
@@ -16,19 +24,4 @@ public class ActivityDTO {
         this.date = date;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
 }

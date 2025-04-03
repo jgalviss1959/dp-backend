@@ -1,7 +1,6 @@
 package com.digitalmoneyhouse.wallet_service.client;
 
 import com.digitalmoneyhouse.wallet_service.dto.UserAliasDTO;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -6,8 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="e770e2c5-027d-43ad-b4fe-762a219020dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/config/SwaggerGatewayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/digitalmoneyhouse/api_gateway/security/JwtAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/test/java/com/digitalmoneyhouse/transaction_service/TransactionServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/FeignClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/config/FeignClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/AccountDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/AccountDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/ActivityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/ActivityDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/DepositRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/DepositRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/TransferRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/dto/TransferRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/digitalmoneyhouse/transaction_service/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/dto/LoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/dto/LoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/CvuAliasGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/CvuAliasGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/digitalmoneyhouse/user_service/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/digitalmoneyhouse/user_service/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/digitalmoneyhouse/user_service/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/config/FeignClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/config/FeignClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/CardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/CardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/DashboardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/DashboardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/UserAliasDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/dto/UserAliasDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/java/com/digitalmoneyhouse/wallet_service/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wallet-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +74,15 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/OneDrive/Desktop/AYUDA/digital-money-house&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Usuario/OneDrive/Desktop/AYUDA/digital-money-house",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.TransactionServiceApplicationTests.testTransferBetweenAccounts">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.digitalmoneyhouse.api_gateway.ApiGatewayApplication" />
@@ -122,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="JUnit.TransactionServiceApplicationTests.testTransferBetweenAccounts" />
         <item itemvalue="JUnit.WalletServiceApplicationTests (1)" />
         <item itemvalue="JUnit.UserServiceApplicationTests" />
         <item itemvalue="JUnit.TransactionServiceApplicationTests" />
-        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>

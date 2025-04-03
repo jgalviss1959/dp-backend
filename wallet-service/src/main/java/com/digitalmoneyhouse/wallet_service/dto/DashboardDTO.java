@@ -13,5 +13,16 @@ public class DashboardDTO {
     private String cvu;
     private Double balance;
     private List<TransactionDTO> lastTransactions;
+
+    public DashboardDTO() {
+    }
+
+    public DashboardDTO(Long id, String alias, String cvu, Double balance, List<TransactionDTO> lastTransactions) {
+        this.id = id;
+        this.alias = alias;
+        this.cvu = cvu;
+        this.balance = balance;
+        this.lastTransactions = lastTransactions;
+    }
 }
 

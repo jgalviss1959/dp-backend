@@ -11,4 +11,14 @@ public class TransferRequestDTO {
     private String destination;
     private BigDecimal amount;
     private String name; // Opcional
+
+    public TransferRequestDTO() {
+    }
+
+    public TransferRequestDTO(String origin, String destination, BigDecimal amount, String name) {
+        this.origin = origin;
+        this.destination = destination;
+        this.amount = amount;
+        this.name = name;
+    }
 }

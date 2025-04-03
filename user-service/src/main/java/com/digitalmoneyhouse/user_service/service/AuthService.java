@@ -1,7 +1,7 @@
 package com.digitalmoneyhouse.user_service.service;
 
-import com.digitalmoneyhouse.user_service.repository.RevokedTokenRepository;
 import com.digitalmoneyhouse.user_service.entity.RevokedToken;
+import com.digitalmoneyhouse.user_service.repository.RevokedTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

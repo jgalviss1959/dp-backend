@@ -10,7 +10,6 @@ import java.util.Optional;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
-    // Retorna las últimas 5 transacciones por fecha descendente
     List<Transaction> findTop5ByAccountIdOrderByDateDesc(Long accountId);
 
     List<Transaction> findByAccountIdOrderByDateDesc(Long accountId);

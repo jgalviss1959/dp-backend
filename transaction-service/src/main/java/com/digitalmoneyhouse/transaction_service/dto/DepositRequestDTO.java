@@ -1,7 +1,12 @@
 package com.digitalmoneyhouse.transaction_service.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@Getter
+@Setter
 public class DepositRequestDTO {
     private Long accountId;
     private String cardNumber;
@@ -15,15 +20,4 @@ public class DepositRequestDTO {
         this.amount = amount;
     }
 
-    public Long getAccountId() {
-        return accountId;
-    }
-
-    public String getCardNumber() {
-        return cardNumber;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
 }
