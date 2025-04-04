@@ -1,0 +1,794 @@
+{
+	"info": {
+		"_postman_id": "a99b370d-7d70-402a-bd68-0e5cd190eab0",
+		"name": "digital-money-house",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17627739"
+	},
+	"item": [
+		{
+			"name": "user-service",
+			"item": [
+				{
+					"name": "AuthController",
+					"item": [
+						{
+							"name": "Cerrar sesión",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMzc5NSwiZXhwIjoxNzQzNjI3Mzk1fQ.dZ1perIl0H70_mUl0xENNpWlbaRh-bg485dcDXA1E4k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LoginController",
+					"item": [
+						{
+							"name": "Iniciar sesión",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"gp@mail.com\",\r\n  \"password\": \"Algo123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UserController",
+					"item": [
+						{
+							"name": "Registro de usuario",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Sofi\",\r\n  \"lastName\":\"Perez\",\r\n  \"dni\": \"12894778\",\r\n  \"email\": \"sperez@mail.com\",\r\n  \"phone\": \"099999999\",\r\n  \"password\": \"Algo123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cuenta según email",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyNDMwNCwiZXhwIjoxNzQzNjI3OTA0fQ.qBEpx8ComhCxzGHWdV_xMPSY8K98d-MaOP11-VaJH-s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/email/user@mail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"email",
+										"user@mail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cuenta según id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyNDMwNCwiZXhwIjoxNzQzNjI3OTA0fQ.qBEpx8ComhCxzGHWdV_xMPSY8K98d-MaOP11-VaJH-s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/email/user@mail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"email",
+										"user@mail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Alias y cvu de la cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyNDMwNCwiZXhwIjoxNzQzNjI3OTA0fQ.qBEpx8ComhCxzGHWdV_xMPSY8K98d-MaOP11-VaJH-s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/1/alias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"1",
+										"alias"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Editar tel o mail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyNDMwNCwiZXhwIjoxNzQzNjI3OTA0fQ.qBEpx8ComhCxzGHWdV_xMPSY8K98d-MaOP11-VaJH-s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": \"099555555\"\r\n // \"phone\": \"099555555\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet-service",
+			"item": [
+				{
+					"name": "CardController",
+					"item": [
+						{
+							"name": "Tarjetas de una cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/cards",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"cards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Una tarjeta de cierta cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMDE2MiwiZXhwIjoxNzQzNjIzNzYyfQ.iTSelPBXAGPmk8iBAuCz2NhlFUGUyAnNZtwhJF8YtWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/cards/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"cards",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar tarjeta a cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cardNumber\": \"1234357887654321\",\r\n  \"cardHolder\": \"User Name\",\r\n  \"expirationDate\": \"12/25\",\r\n  \"cardType\": \"DEBIT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/cards",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"cards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar tarjeta de una cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/cards/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"cards",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AccountController",
+					"item": [
+						{
+							"name": "Cuenta por Id - alias, balance, cvu",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMzc5NSwiZXhwIjoxNzQzNjI3Mzk1fQ.dZ1perIl0H70_mUl0xENNpWlbaRh-bg485dcDXA1E4k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cuenta por cvu - balance, alias, cvu",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMDE2MiwiZXhwIjoxNzQzNjIzNzYyfQ.iTSelPBXAGPmk8iBAuCz2NhlFUGUyAnNZtwhJF8YtWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/cvu/5c24bd6d418348f9ad722f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"cvu",
+										"5c24bd6d418348f9ad722f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cuenta dashboard",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMDE2MiwiZXhwIjoxNzQzNjIzNzYyfQ.iTSelPBXAGPmk8iBAuCz2NhlFUGUyAnNZtwhJF8YtWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/dashboard/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"dashboard",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incrementar balance de cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMzc5NSwiZXhwIjoxNzQzNjI3Mzk1fQ.dZ1perIl0H70_mUl0xENNpWlbaRh-bg485dcDXA1E4k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "1500.00",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"deposit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar balance de cuenta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMzc5NSwiZXhwIjoxNzQzNjI3Mzk1fQ.dZ1perIl0H70_mUl0xENNpWlbaRh-bg485dcDXA1E4k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "2000",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/balance/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"balance",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction-service",
+			"item": [
+				{
+					"name": "Todos los movimientos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": 1, \r\n    \"cardNumber\": \"4111111111111111\", \r\n    \"amount\": 50.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/accounts/1/activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"accounts",
+								"1",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Últimos 5 movimientos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/account/1/last",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"account",
+								"1",
+								"last"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle cierta actividad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/accounts/1/activity/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"accounts",
+								"1",
+								"activity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depósito desde tarjeta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMjY1MiwiZXhwIjoxNzQzNjI2MjUyfQ.oESY-iwhIMNnkYnmnbq7RCIVQ7DYorsCyUtAd_MoL-I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": 2,\r\n    \"cardNumber\": \"1234567812345678\",\r\n    \"amount\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/accounts/2/transferences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"accounts",
+								"2",
+								"transferences"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia entre cuentas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJncEBtYWlsLmNvbSIsImlhdCI6MTc0MzYyMDE2MiwiZXhwIjoxNzQzNjIzNzYyfQ.iTSelPBXAGPmk8iBAuCz2NhlFUGUyAnNZtwhJF8YtWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"origin\": \"0d188f5116e44680a4d32d\",         // CVU origen \r\n  \"destination\": \"5c24bd6d418348f9ad722f\",    // CVU destino  \r\n  \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/accounts/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"accounts",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
